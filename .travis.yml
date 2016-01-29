@@ -12,7 +12,7 @@ env:
   - JYTHON=true
 install:
   - if [ -z "$JYTHON" ]; then travis_retry pip install codecov; fi
-  - if [ "$TOX_ENV" ]; then travis_retry pip install tox>; fi
+  - if [ "$TOX_ENV" ]; then travis_retry pip install tox; fi
 before_install:
   - export JYTHON_URL='http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar'
   - if [ "$JYTHON" ]; then wget $JYTHON_URL -O jython_installer.jar; java -jar jython_installer.jar -s -d $HOME/jython; export PATH=$HOME/jython/bin:$PATH; fi

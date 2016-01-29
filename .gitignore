@@ -1,0 +1,48 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+.eggs
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+venv*/
+pyvenv*/
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+coverage.xml
+junit.xml
+.tox
+.coverage.*
+htmlcov
+
+# Translations
+*.mo
+
+.idea
+
+.DS_Store
+*~
+.*.sw[po]
+.build
+.ve
+.env
+.bootstrap
+*.bak
+.cache

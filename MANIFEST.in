@@ -1,0 +1,6 @@
+include CHANGELOG.md
+include README.rst
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

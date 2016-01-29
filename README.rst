@@ -30,7 +30,7 @@ or from source:
 Usage
 -----
 
-pytest-click comes with some configurable fixtures - `cli_runner` and `isolated_cli_runner`.
+pytest-click comes with some configurable fixtures - ``cli_runner`` and ``isolated_cli_runner``.
 
 .. code:: python
 
@@ -67,17 +67,18 @@ pytest-click comes with some configurable fixtures - `cli_runner` and `isolated_
         assert result.exit_code == 0
         assert result.output == 'Hello World!\n'
 
-Both runners can be configured via `runner_setup` mark:
+Both runners can be configured via ``runner_setup`` mark:
 
 .. code:: python
 
     import pytest
 
+
     @pytest.mark.runner_setup(charset='cp1251', env={'test': 1}, echo_stdin=True)
     def test_runner_setup(cli_runner):
         ...
 
-All kwargs will be passed to `click.testing.CliRunner` initialization.
+All kwargs will be passed to ``click.testing.CliRunner`` initialization.
 
 Python support
 --------------

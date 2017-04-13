@@ -1,24 +1,37 @@
 language: python
-python:
-  - 3.5
-env:
-  - TOX_ENV=py26
-  - TOX_ENV=py27
-  - TOX_ENV=py33
-  - TOX_ENV=py34
-  - TOX_ENV=py35
-  - TOX_ENV=pypy
-  - TOX_ENV=pypy3
-  - JYTHON=true
+matrix:
+  include:
+    - python: 3.5
+      env:
+      - TOX_ENV=py26
+    - python: 3.5
+      env:
+      - TOX_ENV=py27
+    - python: 3.5
+      env:
+      - TOX_ENV=py33
+    - python: 3.5
+      env:
+      - TOX_ENV=py34
+    - python: 3.5
+      env:
+      - TOX_ENV=py35
+    - python: 3.6
+      env:
+      - TOX_ENV=py36
+    - python: 3.5
+      env:
+      - TOX_ENV=pypy
+    - python: 3.5
+      env:
+      - TOX_ENV=jython
+  fast_finish: true
 install:
-  - if [ -z "$JYTHON" ]; then travis_retry pip install codecov; fi
-  - if [ "$TOX_ENV" ]; then travis_retry pip install tox; fi
+  - travis_retry pip install tox
 before_install:
   - export JYTHON_URL='http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar'
-  - if [ "$JYTHON" ]; then wget $JYTHON_URL -O jython_installer.jar; java -jar jython_installer.jar -s -d $HOME/jython; export PATH=$HOME/jython/bin:$PATH; fi
-
+  - if [ $TOX_ENV = "jython" ]; then wget $JYTHON_URL -O jython_installer.jar; java -jar jython_installer.jar -s -d $HOME/jython; export PATH=$HOME/jython/bin:$PATH; fi
 script:
-  - if [ "$JYTHON" ]; then travis_retry jython setup.py test; fi
-  - if [ "$TOX_ENV" ]; then tox -e $TOX_ENV; fi
+  - tox -e $TOX_ENV
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)

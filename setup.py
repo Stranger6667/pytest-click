@@ -6,8 +6,6 @@ import platform
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
-from pytest_click import __version__
-
 
 PYPY = hasattr(sys, 'pypy_translation_info')
 PYPY3 = PYPY and sys.version_info[0] == 3
@@ -51,7 +49,7 @@ if not JYTHON:
 
 setup(
     name='pytest_click',
-    version=__version__,
+    version='0.2',
     packages=['pytest_click'],
     url='https://github.com/Stranger6667/pytest-click',
     license='MIT',

@@ -22,9 +22,11 @@ matrix:
     - python: 3.5
       env:
       - TOX_ENV=pypy
-    - python: 3.5
+    - python: 3.4
       env:
       - TOX_ENV=jython
+  allow_failures:
+    - python: 3.4
   fast_finish: true
 install:
   - travis_retry pip install tox

@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 import sys
-import platform
 
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
-
-
-PYPY = hasattr(sys, 'pypy_translation_info')
-PYPY3 = PYPY and sys.version_info[0] == 3
 
 
 class PyTest(TestCommand):

@@ -9,7 +9,6 @@ from setuptools.command.test import test as TestCommand
 
 PYPY = hasattr(sys, 'pypy_translation_info')
 PYPY3 = PYPY and sys.version_info[0] == 3
-JYTHON = platform.system() == 'Java'
 
 
 class PyTest(TestCommand):
@@ -36,14 +35,10 @@ requirements = [
     'pytest>=3.6.0',
 ]
 
-test_requirements = []
-
+test_requirements = ['pytest-cov>=1.8']
 
 if sys.version_info < (3, 3):
     test_requirements.append('mock==1.0.1')
-
-if not JYTHON:
-    test_requirements.append('pytest-cov>=1.8')
 
 setup(
     name='pytest_click',
@@ -69,7 +64,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
-        'Programming Language :: Python :: Implementation :: Jython',
         'Topic :: Software Development :: Testing',
     ],
     cmdclass={'test': PyTest},

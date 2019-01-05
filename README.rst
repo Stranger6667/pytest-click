@@ -83,7 +83,7 @@ All kwargs will be passed to ``click.testing.CliRunner`` initialization.
 Python support
 --------------
 
-pytest-click supports Python 2.6, 2.7, 3.3, 3.4, 3.5, 3.6, PyPy and Jython.
+pytest-click supports Python 2.7, 3.4, 3.5, 3.6 and PyPy.
 
 
 .. |Build Status| image:: https://travis-ci.org/Stranger6667/pytest-click.svg?branch=master

@@ -1,16 +1,12 @@
 language: python
+dist: xenial
 matrix:
   include:
     - python: 3.5
       env:
-      - TOX_ENV=py26
-    - python: 3.5
-      env:
       - TOX_ENV=py27
     - python: 3.5
-      env:
-      - TOX_ENV=py33
-    - python: 3.5
+      dist: trusty
       env:
       - TOX_ENV=py34
     - python: 3.5
@@ -19,20 +15,14 @@ matrix:
     - python: 3.6
       env:
       - TOX_ENV=py36
-    - python: 3.5
+    - python: "pypy2.7-6.0"
       env:
       - TOX_ENV=pypy
-    - python: 3.4
-      env:
-      - TOX_ENV=jython
   allow_failures:
     - python: 3.4
   fast_finish: true
 install:
   - travis_retry pip install tox
-before_install:
-  - export JYTHON_URL='http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar'
-  - if [ $TOX_ENV = "jython" ]; then wget $JYTHON_URL -O jython_installer.jar; java -jar jython_installer.jar -s -d $HOME/jython; export PATH=$HOME/jython/bin:$PATH; fi
 script:
   - tox -e $TOX_ENV
 after_success:

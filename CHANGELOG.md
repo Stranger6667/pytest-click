@@ -1,6 +1,11 @@
 History
 -------
 
+Unreleased
+----------
+
+* Dropped support for Python 2.6, 3.3 and Jython
+
 0.2 - 13.04.2017
 ----------------
 

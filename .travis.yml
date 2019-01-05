@@ -6,6 +6,7 @@ matrix:
       env:
       - TOX_ENV=py27
     - python: 3.5
+      dist: trusty
       env:
       - TOX_ENV=py34
     - python: 3.5

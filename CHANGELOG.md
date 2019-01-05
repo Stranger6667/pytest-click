@@ -1,8 +1,8 @@
 History
 -------
 
-Unreleased
-----------
+0.3 - 05.01.2019
+----------------
 
 * Added Python 3.7 support
 * Dropped support for Python 2.6, 3.3 and Jython

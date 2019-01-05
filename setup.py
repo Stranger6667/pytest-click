@@ -37,7 +37,7 @@ if sys.version_info < (3, 3):
 
 setup(
     name='pytest_click',
-    version='0.2',
+    version='0.3',
     packages=['pytest_click'],
     url='https://github.com/Stranger6667/pytest-click',
     license='MIT',

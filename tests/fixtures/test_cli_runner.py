@@ -9,7 +9,7 @@ def test_fixture(testdir):
         assert isinstance(cli_runner, CliRunner)
     ''')
     result = testdir.runpytest('--verbose')
-    assert 'test_fixture.py::test_fixture PASSED' in result.stdout.lines
+    result.stdout.fnmatch_lines("test_fixture.py::test_fixture PASSED*")
 
 
 def test_real_invocation(testdir):
@@ -28,7 +28,7 @@ def test_real_invocation(testdir):
         assert result.output == 'Hello Peter!\\n'
     ''')
     result = testdir.runpytest('--verbose')
-    assert 'test_real_invocation.py::test_fixture PASSED' in result.stdout.lines
+    result.stdout.fnmatch_lines('test_real_invocation.py::test_fixture PASSED*')
 
 
 def test_runner_setup(testdir):
@@ -42,7 +42,7 @@ def test_runner_setup(testdir):
         assert cli_runner.echo_stdin
     ''')
     result = testdir.runpytest('--verbose')
-    assert 'test_runner_setup.py::test_runner_setup PASSED' in result.stdout.lines
+    result.stdout.fnmatch_lines('test_runner_setup.py::test_runner_setup PASSED*')
 
 
 def test_docstring(testdir):

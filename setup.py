@@ -33,7 +33,7 @@ class PyTest(TestCommand):
 
 requirements = [
     'click>=6.0',
-    'pytest>=2.8.5',
+    'pytest>=3.6.0',
 ]
 
 test_requirements = []
@@ -41,8 +41,6 @@ test_requirements = []
 
 if sys.version_info < (3, 3):
     test_requirements.append('mock==1.0.1')
-if sys.version_info[:2] == (3, 2):
-    test_requirements.append('coverage==3.7.1')
 
 if not JYTHON:
     test_requirements.append('pytest-cov>=1.8')
@@ -65,10 +63,7 @@ setup(
         'Operating System :: OS Independent',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',

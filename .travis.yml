@@ -3,13 +3,7 @@ matrix:
   include:
     - python: 3.5
       env:
-      - TOX_ENV=py26
-    - python: 3.5
-      env:
       - TOX_ENV=py27
-    - python: 3.5
-      env:
-      - TOX_ENV=py33
     - python: 3.5
       env:
       - TOX_ENV=py34

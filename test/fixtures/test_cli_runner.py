@@ -55,5 +55,5 @@ def test_docstring(testdir):
     result = testdir.runpytest("--fixtures")
     assert (
         "    Instance of `click.testing.CliRunner`. Can be "
-        "configured with `@pytest.mark.runner_setup`" in result.stdout.lines
+        "configured with `@pytest.mark.runner_setup`." in result.stdout.lines
     )

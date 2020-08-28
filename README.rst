@@ -2,7 +2,7 @@ pytest-click
 ============
 Py.test plugin for `Click <http://click.pocoo.org/>`_.
 
-|Build| |codecov.io|
+|Build| |Coverage| |Version| |Python versions| |License|
 
 
 Installation
@@ -88,6 +88,11 @@ pytest-click supports Python 2.7, 3.4, 3.5, 3.6 and PyPy.
 
 .. |Build| image:: image:: https://github.com/Stranger6667/pytest-click/workflows/build/badge.svg
    :target: https://github.com/Stranger6667/pytest-click/actions
-
-.. |codecov.io| image:: https://codecov.io/github/Stranger6667/pytest-click/coverage.svg?branch=master
+.. |Coverage| image:: https://codecov.io/github/Stranger6667/pytest-click/coverage.svg?branch=master
     :target: https://codecov.io/github/Stranger6667/pytest-click?branch=master
+.. |Version| image:: https://img.shields.io/pypi/v/pytest-click.svg
+   :target: https://pypi.org/project/pytest-click/
+.. |Python versions| image:: https://img.shields.io/pypi/pyversions/pytest-click.svg
+   :target: https://pypi.org/project/pytest-click/
+.. |License| image:: https://img.shields.io/pypi/l/pytest-click.svg
+   :target: https://opensource.org/licenses/MIT

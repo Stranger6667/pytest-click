@@ -2,7 +2,7 @@
 # coding: utf-8
 import sys
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 requirements = [
     "click>=6.0",
@@ -17,7 +17,6 @@ if sys.version_info < (3, 3):
 setup(
     name="pytest_click",
     version="0.3",
-    packages=["pytest_click"],
     url="https://github.com/Stranger6667/pytest-click",
     license="MIT",
     author="Dmitry Dygalo",
@@ -42,6 +41,8 @@ setup(
         "Topic :: Software Development :: Testing",
     ],
     include_package_data=True,
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=requirements,
     tests_require=test_requirements,
     entry_points={

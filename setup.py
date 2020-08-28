@@ -16,7 +16,7 @@ if sys.version_info < (3, 3):
 
 setup(
     name="pytest_click",
-    version="0.3",
+    version="0.3.1",
     url="https://github.com/Stranger6667/pytest-click",
     license="MIT",
     author="Dmitry Dygalo",

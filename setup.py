@@ -9,7 +9,7 @@ requirements = [
     "pytest>=3.6.0",
 ]
 
-test_requirements = ["pytest-cov>=1.8"]
+test_requirements = []
 
 if sys.version_info < (3, 3):
     test_requirements.append("mock==1.0.1")

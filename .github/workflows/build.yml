@@ -71,6 +71,7 @@ jobs:
         env:
           TOX_JOB: ${{ matrix.python }}
 
+      - run: coverage combine
       - run: coverage report
       - run: coverage xml -i
 

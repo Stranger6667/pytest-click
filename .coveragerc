@@ -1,5 +1,12 @@
 [run]
 branch = true
+parallel = true
+source = pytest_click
+
+[paths]
+source =
+   src/pytest_click
+   .tox/*/lib/python*/site-packages/pytest_click
 
 [report]
 show_missing = true

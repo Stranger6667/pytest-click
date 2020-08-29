@@ -14,7 +14,7 @@ requirements = [
 
 setup(
     name="pytest_click",
-    version="1.0.1",
+    version="1.0.2",
     url="https://github.com/Stranger6667/pytest-click",
     license="MIT",
     author="Dmitry Dygalo",

@@ -4,8 +4,6 @@ help:
 	@echo "clean-pyc - remove Python file artifacts"
 	@echo "clean-test - remove test and coverage artifacts"
 	@echo "test - run tests quickly with the default Python"
-	@echo "test-all - run tests on every Python version with tox"
-	@echo "coverage - check code coverage quickly with the default Python"
 	@echo "install - install the package to the active Python's site-packages"
 
 clean: clean-build clean-pyc clean-test
@@ -31,13 +29,7 @@ clean-test:
 	rm -fr reports/
 
 test:
-	python setup.py test -a "--cov pytest_click tests -p no:pytest_click"
-
-coverage:
-	coverage run --source pytest_click setup.py test
-	coverage report -m
-	coverage html
-	open htmlcov/index.html
+	tox -e py
 
 install: clean
 	python setup.py install

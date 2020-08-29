@@ -1,4 +1,3 @@
-# coding: utf-8
 from .fixtures import cli_runner, isolated_cli_runner
 
 

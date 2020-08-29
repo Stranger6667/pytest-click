@@ -3,7 +3,7 @@ pytest-click
 
 |Build| |Coverage| |Version| |Python versions| |License|
 
-Py.test plugin for `Click <http://click.pocoo.org/>`_.
+`pytest <https://github.com/pytest-dev/pytest>`_ plugin for `Click <http://click.pocoo.org/>`_.
 
 Installation
 ------------
@@ -17,7 +17,7 @@ The current stable release:
 Usage
 -----
 
-pytest-click comes with some configurable fixtures - ``cli_runner`` and ``isolated_cli_runner``.
+```pytest-click`` comes with some configurable fixtures - ``cli_runner`` and ``isolated_cli_runner``.
 
 .. code:: python
 

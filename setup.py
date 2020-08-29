@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
-import sys
 from os import path
 
 from setuptools import find_packages, setup
@@ -11,13 +9,8 @@ with open(path.join(this_directory, "README.rst")) as fd:
 
 requirements = [
     "click>=6.0",
-    "pytest>=3.6.0",
+    "pytest>=5.0",
 ]
-
-test_requirements = []
-
-if sys.version_info < (3, 3):
-    test_requirements.append("mock==1.0.1")
 
 setup(
     name="pytest_click",
@@ -38,7 +31,6 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
@@ -53,7 +45,6 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=requirements,
-    tests_require=test_requirements,
     entry_points={
         "pytest11": [
             "pytest_click = pytest_click",

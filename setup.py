@@ -14,7 +14,7 @@ requirements = [
 
 setup(
     name="pytest_click",
-    version="0.3.1",
+    version="1.0.0",
     url="https://github.com/Stranger6667/pytest-click",
     license="MIT",
     author="Dmitry Dygalo",
@@ -25,7 +25,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/x-rst",
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "Operating System :: OS Independent",

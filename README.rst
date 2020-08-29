@@ -80,11 +80,6 @@ Both runners can be configured via ``runner_setup`` mark:
 
 All kwargs will be passed to ``click.testing.CliRunner`` initialization.
 
-Python support
---------------
-
-pytest-click supports Python 2.7, 3.4, 3.5, 3.6 and PyPy.
-
 
 .. |Build| image:: image:: https://github.com/Stranger6667/pytest-click/workflows/build/badge.svg
    :target: https://github.com/Stranger6667/pytest-click/actions

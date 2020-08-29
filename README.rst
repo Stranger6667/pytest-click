@@ -14,19 +14,6 @@ The current stable release:
 
     pip install pytest_click
 
-or:
-
-::
-
-    easy_install pytest_click
-
-or from source:
-
-::
-
-    $ sudo python setup.py install
-
-
 Usage
 -----
 

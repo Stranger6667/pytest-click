@@ -6,7 +6,7 @@ from os import path
 from setuptools import find_packages, setup
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, "README.rst"), encoding="utf-8") as fd:
+with open(path.join(this_directory, "README.rst")) as fd:
     long_description = fd.read()
 
 requirements = [
@@ -44,6 +44,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Testing",

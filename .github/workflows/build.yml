@@ -51,7 +51,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python: [3.5, 3.6, 3.7, 3.8]
+        python: [3.5, 3.6, 3.7, 3.8, 3.9.0-rc.1, pypy3]
 
     name: ${{ matrix.os }}/tests_${{ matrix.python }}
     runs-on: ${{ matrix.os }}
@@ -67,7 +67,7 @@ jobs:
       - run: pip install tox coverage
 
       - name: Run ${{ matrix.python }} tox job
-        run: tox -e py${TOX_JOB//.} # Strip dot from python version to match tox job
+        run: tox -e py
         env:
           TOX_JOB: ${{ matrix.python }}
 

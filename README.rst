@@ -1,9 +1,9 @@
 pytest-click
 ============
-Py.test plugin for `Click <http://click.pocoo.org/>`_.
 
 |Build| |Coverage| |Version| |Python versions| |License|
 
+Py.test plugin for `Click <http://click.pocoo.org/>`_.
 
 Installation
 ------------
@@ -66,7 +66,7 @@ Both runners can be configured via ``runner_setup`` mark:
 All kwargs will be passed to ``click.testing.CliRunner`` initialization.
 
 
-.. |Build| image:: image:: https://github.com/Stranger6667/pytest-click/workflows/build/badge.svg
+.. |Build| image:: https://github.com/Stranger6667/pytest-click/workflows/build/badge.svg
    :target: https://github.com/Stranger6667/pytest-click/actions
 .. |Coverage| image:: https://codecov.io/github/Stranger6667/pytest-click/coverage.svg?branch=master
     :target: https://codecov.io/github/Stranger6667/pytest-click?branch=master

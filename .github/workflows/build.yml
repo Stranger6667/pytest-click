@@ -1,4 +1,4 @@
-name: Build jobs
+name: build
 # Triggered by changes in code-specific or job-specific files
 
 on:

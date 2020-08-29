@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 import sys
+from os import path
 
 from setuptools import find_packages, setup
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, "README.rst"), encoding="utf-8") as fd:
+    long_description = fd.read()
 
 requirements = [
     "click>=6.0",
@@ -24,6 +29,8 @@ setup(
     maintainer="Dmitry Dygalo",
     maintainer_email="dadygalo@gmail.com",
     description="Py.test plugin for Click",
+    long_description=long_description,
+    long_description_content_type="text/x-rst",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",

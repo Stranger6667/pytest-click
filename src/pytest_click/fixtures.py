@@ -19,7 +19,7 @@ def cli_runner(request):
     return CliRunner(**init_kwargs)
 
 
-@pytest.yield_fixture
+@pytest.fixture
 def isolated_cli_runner(cli_runner):
     """Instance of `click.testing.CliRunner` with automagically `isolated_filesystem()` called."""
     with cli_runner.isolated_filesystem():

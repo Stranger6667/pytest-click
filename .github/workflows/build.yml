@@ -10,6 +10,7 @@ on:
       - '.pre-commit-config.yaml'
       - '.pydocstyle'
       - '.relint.yml'
+      - 'mypy.ini'
       - '.yamllint'
       - 'tox.ini'
   push:

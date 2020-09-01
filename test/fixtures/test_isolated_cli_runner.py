@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 def test_fixture(testdir):
     testdir.makeconftest(
         """

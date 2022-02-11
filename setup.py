@@ -14,14 +14,14 @@ requirements = [
 
 setup(
     name="pytest_click",
-    version="1.0.2",
+    version="1.1.0",
     url="https://github.com/Stranger6667/pytest-click",
     license="MIT",
     author="Dmitry Dygalo",
     author_email="dadygalo@gmail.com",
     maintainer="Dmitry Dygalo",
     maintainer_email="dadygalo@gmail.com",
-    description="Py.test plugin for Click",
+    description="Pytest plugin for Click",
     long_description=long_description,
     long_description_content_type="text/x-rst",
     classifiers=[

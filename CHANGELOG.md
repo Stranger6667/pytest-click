@@ -1,6 +1,9 @@
 History
 -------
 
+- Added build for Python 3.10
+- Drop support of Python 3.5 & 3.6
+
 1.0.2 - 29.08.2020
 ----------------
 

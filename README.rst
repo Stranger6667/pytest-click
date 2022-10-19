@@ -17,7 +17,7 @@ The current stable release:
 Usage
 -----
 
-```pytest-click`` comes with some configurable fixtures - ``cli_runner`` and ``isolated_cli_runner``.
+``pytest-click`` comes with some configurable fixtures - ``cli_runner`` and ``isolated_cli_runner``.
 
 .. code:: python
 

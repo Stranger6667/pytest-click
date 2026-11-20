@@ -1,51 +1,69 @@
-History
--------
+# Changelog
 
-Unreleased
-----------
+## [Unreleased](https://github.com/Stranger6667/pytest-click/compare/v1.1.0...HEAD)
+
+### Added
 
 - Support for Python 3.11–3.15.
-- Drop support for Python 3.7–3.10.
 
-1.1.0 - 11.02.2022
-------------------
+### Removed
 
-- Added build for Python 3.10
-- Drop support of Python 3.5 & 3.6
+- Support for Python 3.7–3.10.
 
-1.0.2 - 29.08.2020
-------------------
+## [1.1.0](https://github.com/Stranger6667/pytest-click/compare/v1.0.2...v1.1.0) - 2022-02-11
 
-- Format code examples with "black".
+### Added
 
-1.0.1 - 29.08.2020
-------------------
+- Support for Python 3.10.
 
-- Include "test" to the package itself.
+### Removed
 
-1.0.0 - 29.08.2020
-------------------
+- Support for Python 3.5 and 3.6.
 
-- Added builds for Python 3.8 & 3.9
-- Drop support for Python 2.7 & 3.4
+## [1.0.2](https://github.com/Stranger6667/pytest-click/compare/v1.0.1...v1.0.2) - 2020-08-29
 
-0.3.1 - 28.08.2020
-------------------
+### Changed
 
-- Move to `src` layout
+- Format code examples with `black`.
 
-0.3 - 05.01.2019
-----------------
+## [1.0.1](https://github.com/Stranger6667/pytest-click/compare/v1.0.0...v1.0.1) - 2020-08-29
 
-* Added Python 3.7 support
-* Dropped support for Python 2.6, 3.3 and Jython
+### Changed
 
-0.2 - 13.04.2017
-----------------
+- Include tests in the source distribution.
 
-* Added Python 3.6 support
+## [1.0.0](https://github.com/Stranger6667/pytest-click/compare/v0.3.1...v1.0.0) - 2020-08-29
 
-0.1 - 29.01.2016
-----------------
+### Added
 
-* Initial release.
+- Support for Python 3.8 and 3.9.
+
+### Removed
+
+- Support for Python 2.7 and 3.4.
+
+## [0.3.1](https://github.com/Stranger6667/pytest-click/compare/0.3...v0.3.1) - 2020-08-28
+
+### Changed
+
+- Move to the `src` layout.
+
+## 0.3 - 2019-01-05
+
+### Added
+
+- Support for Python 3.7.
+
+### Removed
+
+- Support for Python 2.6, 3.3 and Jython.
+
+## 0.2 - 2017-04-13
+
+### Added
+
+- Support for Python 3.6.
+
+## 0.1 - 2016-01-29
+
+- Initial release.

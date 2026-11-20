@@ -9,7 +9,7 @@ description = "Pytest plugin for Click"
 keywords = ["pytest", "click", "cli", "testing"]
 authors = [{ name = "Dmitry Dygalo", email = "dmitry@dygalo.dev" }]
 maintainers = [{ name = "Dmitry Dygalo", email = "dmitry@dygalo.dev" }]
-readme = "README.rst"
+readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 classifiers = [

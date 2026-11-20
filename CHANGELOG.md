@@ -1,6 +1,12 @@
 History
 -------
 
+Unreleased
+----------
+
+- Support for Python 3.11–3.15.
+- Drop support for Python 3.7–3.10.
+
 1.1.0 - 11.02.2022
 ------------------
 

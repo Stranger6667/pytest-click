@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/Stranger6667/pytest-click/compare/v1.1.0...HEAD)
+## [Unreleased](https://github.com/Stranger6667/pytest-click/compare/v2.0.0...HEAD)
+
+## [2.0.0](https://github.com/Stranger6667/pytest-click/compare/v1.1.0...v2.0.0) - 2026-11-20
 
 ### Added
 

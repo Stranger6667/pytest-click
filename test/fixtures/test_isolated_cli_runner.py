@@ -1,10 +1,7 @@
-def test_fixture(testdir):
-    testdir.makeconftest(
+def test_fixture(pytester):
+    pytester.makeconftest(
         """
-    try:
-        from mock import patch, Mock
-    except ImportError:
-        from unittest.mock import patch, Mock
+    from unittest.mock import patch
 
     def pytest_configure(config):
         config.patched = patch('pytest_click.fixtures.CliRunner.isolated_filesystem')
@@ -14,7 +11,7 @@ def test_fixture(testdir):
         config.patched.stop()
     """
     )
-    testdir.makepyfile(
+    pytester.makepyfile(
         """
     from click.testing import CliRunner
 
@@ -23,12 +20,12 @@ def test_fixture(testdir):
         assert isolated_cli_runner.isolated_filesystem.called
     """
     )
-    result = testdir.runpytest("--verbose")
+    result = pytester.runpytest("--verbose")
     result.stdout.fnmatch_lines("test_fixture.py::test_fixture PASSED*")
 
 
-def test_real_invocation(testdir):
-    testdir.makepyfile(
+def test_real_invocation(pytester):
+    pytester.makepyfile(
         """
     import click
 
@@ -47,12 +44,12 @@ def test_real_invocation(testdir):
         assert result.output == 'Hello World!\\n'
     """
     )
-    result = testdir.runpytest("--verbose")
+    result = pytester.runpytest("--verbose")
     result.stdout.fnmatch_lines("test_real_invocation.py::test_fixture PASSED*")
 
 
-def test_docstring(testdir):
-    result = testdir.runpytest("--fixtures")
+def test_docstring(pytester):
+    result = pytester.runpytest("--fixtures")
     assert (
         "    Instance of `click.testing.CliRunner` with "
         "automagically `isolated_filesystem()` called." in result.stdout.lines

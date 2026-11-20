@@ -5,6 +5,7 @@
 ### Added
 
 - Support for Python 3.11–3.15.
+- `py.typed` marker.
 
 ### Removed
 

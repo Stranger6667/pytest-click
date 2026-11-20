@@ -1,5 +1,4 @@
-# pylint: disable=redefined-outer-name
-from typing import Generator
+from collections.abc import Generator
 
 import pytest
 from _pytest.fixtures import SubRequest

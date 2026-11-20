@@ -1,5 +1,5 @@
-def test_fixture(testdir):
-    testdir.makepyfile(
+def test_fixture(pytester):
+    pytester.makepyfile(
         """
     from click.testing import CliRunner
 
@@ -7,12 +7,12 @@ def test_fixture(testdir):
         assert isinstance(cli_runner, CliRunner)
     """
     )
-    result = testdir.runpytest("--verbose")
+    result = pytester.runpytest("--verbose")
     result.stdout.fnmatch_lines("test_fixture.py::test_fixture PASSED*")
 
 
-def test_real_invocation(testdir):
-    testdir.makepyfile(
+def test_real_invocation(pytester):
+    pytester.makepyfile(
         """
     import click
 
@@ -28,12 +28,12 @@ def test_real_invocation(testdir):
         assert result.output == 'Hello Peter!\\n'
     """
     )
-    result = testdir.runpytest("--verbose")
+    result = pytester.runpytest("--verbose")
     result.stdout.fnmatch_lines("test_real_invocation.py::test_fixture PASSED*")
 
 
-def test_runner_setup(testdir):
-    testdir.makepyfile(
+def test_runner_setup(pytester):
+    pytester.makepyfile(
         """
     import pytest
 
@@ -44,12 +44,12 @@ def test_runner_setup(testdir):
         assert cli_runner.echo_stdin
     """
     )
-    result = testdir.runpytest("--verbose")
+    result = pytester.runpytest("--verbose")
     result.stdout.fnmatch_lines("test_runner_setup.py::test_runner_setup PASSED*")
 
 
-def test_docstring(testdir):
-    result = testdir.runpytest("--fixtures")
+def test_docstring(pytester):
+    result = pytester.runpytest("--fixtures")
     assert (
         "    Instance of `click.testing.CliRunner`. Can be "
         "configured with `@pytest.mark.runner_setup`." in result.stdout.lines

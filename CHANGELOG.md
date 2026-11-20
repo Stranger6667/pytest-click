@@ -7,6 +7,10 @@
 - Support for Python 3.11–3.15.
 - `py.typed` marker.
 
+### Changed
+
+- Require pytest 7.0 or newer.
+
 ### Removed
 
 - Support for Python 3.7–3.10.

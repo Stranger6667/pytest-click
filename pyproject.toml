@@ -1,10 +1,74 @@
 [build-system]
-requires = ["setuptools >= 40.6.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest_click"
+dynamic = ["version"]
+description = "Pytest plugin for Click"
+keywords = ["pytest", "click", "cli", "testing"]
+authors = [{ name = "Dmitry Dygalo", email = "dmitry@dygalo.dev" }]
+maintainers = [{ name = "Dmitry Dygalo", email = "dmitry@dygalo.dev" }]
+readme = "README.rst"
+license = "MIT"
+requires-python = ">=3.11"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Framework :: Pytest",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = ["click>=6.0", "pytest>=5.0"]
+
+[project.optional-dependencies]
+tests = ["coverage[toml]>=7.2", "pytest>=8"]
+
+[project.entry-points.pytest11]
+pytest_click = "pytest_click"
+
+[project.urls]
+Changelog = "https://github.com/Stranger6667/pytest-click/blob/master/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/Stranger6667/pytest-click/issues"
+Funding = "https://github.com/sponsors/Stranger6667"
+"Source Code" = "https://github.com/Stranger6667/pytest-click"
+
+[tool.hatch.version]
+path = "src/pytest_click/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/test"]
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+xfail_strict = true
+testpaths = ["test"]
+
+[tool.coverage.run]
+parallel = true
+branch = true
+source_pkgs = ["pytest_click"]
+
+[tool.coverage.paths]
+source = ["src", ".tox/*/site-packages", ".tox/*/lib/*/site-packages", ".tox/*/Lib/site-packages"]
+
+[tool.coverage.report]
+show_missing = true
+precision = 2
+fail_under = 100
 
 [tool.black]
 line-length = 120
-target_version = ["py38"]
+target_version = ["py311"]
 
 [tool.isort]
 line_length = 120
@@ -12,4 +76,4 @@ multi_line_output = 3
 default_section = "THIRDPARTY"
 include_trailing_comma = true
 known_first_party = "pytest_click"
-known_third_party = ["_pytest", "click", "pytest", "setuptools"]
+known_third_party = ["_pytest", "click", "pytest"]
